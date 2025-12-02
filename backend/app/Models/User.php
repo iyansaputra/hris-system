@@ -38,4 +38,14 @@ class User extends Authenticatable
     {
         return $this->hasOne(Attendances::class, 'user_id');
     }
+
+    /**
+     * Get the leave associated with the User
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasOne
+     */
+    public function leaves(): HasOne
+    {
+        return $this->hasOne(Leave::class, 'user_id');
+    }
 }

@@ -23,18 +23,33 @@
           <span class="font-medium">Dashboard</span>
         </router-link>
 
-        <!-- Menu Khusus HRD (Contoh Tambahan) -->
         <!-- Jika Anda punya halaman lain khusus HRD, aktifkan ini -->
-        <!-- 
         <router-link 
           v-if="role === 'HRD'" 
-          to="/laporan" 
+          to="/rekap-absensi"
           class="flex items-center px-4 py-3 text-slate-300 rounded-lg transition-colors duration-200 hover:bg-slate-700 hover:text-white"
           active-class="bg-slate-700 text-white shadow-md border-l-4 border-emerald-500"
         >
-          <span class="font-medium">Laporan</span>
+          <span class="font-medium">Rekap Absensi</span>
         </router-link> 
-        -->
+
+        <router-link 
+          v-if="role === 'HRD'" 
+          to="/leave-approve"
+          class="flex items-center px-4 py-3 text-slate-300 rounded-lg transition-colors duration-200 hover:bg-slate-700 hover:text-white"
+          active-class="bg-slate-700 text-white shadow-md border-l-4 border-emerald-500"
+        >
+          <span class="font-medium">Rekap Perizinan</span>
+        </router-link> 
+
+        <router-link 
+          v-if="role === 'Karyawan'" 
+          to="/leave-request"
+          class="flex items-center px-4 py-3 text-slate-300 rounded-lg transition-colors duration-200 hover:bg-slate-700 hover:text-white"
+          active-class="bg-slate-700 text-white shadow-md border-l-4 border-emerald-500"
+        >
+          <span class="font-medium">Ajukan Izin</span>
+        </router-link> 
       </nav>
 
       <!-- Footer Sidebar (Tombol Logout) -->

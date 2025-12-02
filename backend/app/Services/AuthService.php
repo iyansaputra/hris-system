@@ -43,11 +43,11 @@ class AuthService
             ]);
         }
 
-        if ($user->role !== 'HRD') {
-            throw ValidationException::withMessages([
-                'email' => ['Akses ditolak. Hanya akun HRD yang bisa login di sini.'],
-            ]);
-        }
+        // if ($user->role !== 'HRD') {
+        //     throw ValidationException::withMessages([
+        //         'email' => ['Akses ditolak. Hanya akun HRD yang bisa login di sini.'],
+        //     ]);
+        // }
         
         $token = $user->createToken('auth_token')->plainTextToken;
         $karyawan = Karyawans::where('user_id', $user->id)->first();

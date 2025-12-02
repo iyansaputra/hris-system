@@ -13,7 +13,7 @@
 
       <form @submit.prevent="handleLogin">
         <!-- Input Email -->
-        <div class="mb-4">
+        <div class="mb-4 text-left">
           <label class="block text-gray-700 text-sm font-bold mb-2">Email</label>
           <input 
             type="email" 
@@ -25,7 +25,7 @@
         </div>
 
         <!-- Input Password -->
-        <div class="mb-6">
+        <div class="mb-6 text-left">
           <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
           <input 
             type="password" 

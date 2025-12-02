@@ -36,16 +36,16 @@
           </thead>
           <tbody class="divide-y divide-gray-100">
             <tr v-for="(karyawan, index) in karyawans" :key="karyawan.id" class="hover:bg-gray-50 transition duration-150">
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ index + 1 }}</td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-left">{{ index + 1 }}</td>
               
-              <td class="px-6 py-4">
+              <td class="px-6 py-4 text-left">
                 <div class="flex flex-col">
-                  <span class="text-sm font-semibold text-gray-900">{{ karyawan.nama }}</span>
+                  <span class="text-sm font-semibold text-gray-900 ">{{ karyawan.nama }}</span>
                   <span class="text-xs text-gray-500">{{ karyawan.user?.email }}</span>
                 </div>
               </td>
               
-              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700">
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-700 text-left">
                 {{ karyawan.divisions?.nama || '-' }}
               </td>
               
