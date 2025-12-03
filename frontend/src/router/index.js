@@ -36,6 +36,11 @@ const routes = [
         path: 'leave-request',
         name: 'leaveRequest',
         component: () => import('../views/LeaveRequestView.vue')
+      },
+      {
+        path: 'update-profile',
+        name: 'updateProfile',
+        component: () => import('../views/ProfileView.vue')
       }
     ]
   },

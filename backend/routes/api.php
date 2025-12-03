@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\KaryawanController;
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\LeaveController;
+use App\Http\Controllers\ProfileController;
 
 // Public Routes
 Route::post('/register', [AuthController::class, 'register']);
@@ -17,6 +18,7 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/me', function (Request $request) {
         return $request->user();
     });
+    Route::post('/up-profile', [ProfileController::class, 'update']);
 
     //CRUD Karyawan
     Route::apiResource('karyawans', KaryawanController::class);

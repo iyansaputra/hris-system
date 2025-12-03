@@ -43,6 +43,15 @@
         </router-link> 
 
         <router-link 
+          v-if="role === 'HRD'" 
+          to="/update-profile"
+          class="flex items-center px-4 py-3 text-slate-300 rounded-lg transition-colors duration-200 hover:bg-slate-700 hover:text-white"
+          active-class="bg-slate-700 text-white shadow-md border-l-4 border-emerald-500"
+        >
+          <span class="font-medium">Update Profil</span>
+        </router-link>
+
+        <router-link 
           v-if="role === 'Karyawan'" 
           to="/leave-request"
           class="flex items-center px-4 py-3 text-slate-300 rounded-lg transition-colors duration-200 hover:bg-slate-700 hover:text-white"
